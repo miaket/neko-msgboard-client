@@ -2,7 +2,9 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
 
-    <ChatMessageBox v-for="chatMessageElement in chatMessageArray" :key="chatMessageElement.id"
+    <ChatMessageBox
+      v-for="chatMessageElement in chatMessageArray"
+      :key="chatMessageElement.id"
       :timeStamp="chatMessageElement.timeStamp"
       :user="chatMessageElement.user"
       :value="chatMessageElement.value"
