@@ -4,7 +4,7 @@
     height="auto"
     elevation="2"
     class="message-box--wrapper"
-    >
+  >
     <div class="message-box--header">
       <span class="message-box--header--user">
         {{ user }}
