@@ -72,8 +72,8 @@ export default {
     },
   },
   methods: {
-    sendMessageHandler() {
-
+    sendMessageHandler(value) {
+      this.$socket.client.emit('newChatMessage', value);
     },
   },
 };
