@@ -8,9 +8,7 @@
       :timeStamp="chatMessageElement.timeStamp"
       :user="chatMessageElement.user"
       :value="chatMessageElement.value"
-    >
-      {{ item }}
-    </ChatMessageBox>
+    />
 
     <v-text-field
       v-model="value"
