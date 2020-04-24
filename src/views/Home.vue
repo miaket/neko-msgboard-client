@@ -16,7 +16,7 @@
       counter
       solo
     ></v-text-field>
-    <v-btn v-on:click="sendMessageHandler(value)">send</v-btn>
+    <v-btn @click="sendMessageHandler(value)">send</v-btn>
   </div>
 </template>
 
@@ -30,6 +30,8 @@ export default {
   },
   data: () => ({
     value: '',
+    timeStamp: '2:31',
+    user: 'peste',
     chatMessageArray: [
       {
         id: 0,
@@ -67,8 +69,8 @@ export default {
     connect() {
       console.log('socket connected');
     },
-    customEmit(val) {
-      console.log('this method was fired by the socket server. eg: io.emit("customEmit", data)', val);
+    newChatMessage(message) {
+      console.log('message', message);
     },
   },
   methods: {
