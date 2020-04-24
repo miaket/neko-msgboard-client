@@ -20,6 +20,8 @@
 </template>
 
 <script>
+import moment from 'moment';
+
 export default {
   name: 'ChatMessageBox',
   props: {
@@ -29,7 +31,7 @@ export default {
   },
   computed: {
     formattedTimestamp() {
-      return ` - ${this.timeStamp} :`;
+      return ` - ${moment(this.timeStamp).format('D MMM h:mm')} :`;
     },
   },
 };
