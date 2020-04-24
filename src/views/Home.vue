@@ -35,31 +35,31 @@ export default {
     chatMessageArray: [
       {
         id: 0,
-        timeStamp: '10:00',
+        timeStamp: 1587709093651,
         user: 'Peste',
         value: 'oi turo bom? e você eu tobem',
       },
       {
         id: 1,
-        timeStamp: '10:15',
+        timeStamp: 1587709193651,
         user: 'cu',
         value: 'oi turo bom tebe e você? e você eu tobem lol',
       },
       {
         id: 2,
-        timeStamp: '10:15',
+        timeStamp: 1587709293651,
         user: 'Peste',
         value: 'decidi debugar no devtools do internet explorer só de zoa mano xD',
       },
       {
         id: 3,
-        timeStamp: '10:26',
+        timeStamp: 1587709393651,
         user: 'cu',
         value: 'kkk',
       },
       {
         id: 4,
-        timeStamp: '10:26',
+        timeStamp: 1587709493651,
         user: 'cu',
         value: 'top 👌',
       },
@@ -70,7 +70,14 @@ export default {
       console.log('socket connected');
     },
     newChatMessage(message) {
-      console.log('message', message);
+      this.chatMessageArray = [
+        ...this.chatMessageArray,
+        {
+          timeStamp: 1587709493651,
+          user: this.user,
+          value: message,
+        },
+      ];
     },
   },
   methods: {
