@@ -25,7 +25,7 @@ import moment from 'moment';
 export default {
   name: 'ChatMessageBox',
   props: {
-    timeStamp: String,
+    timeStamp: Number,
     user: String,
     value: String,
   },
